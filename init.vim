@@ -17,6 +17,8 @@ lua require('user.telescope')
 lua require('user.autopairs')
 lua require('user.bufferline')
 lua require('user.whichkey')
+lua require('user.project')
+lua require('user.impatient')
 
 try
 source ~/.vim_runtime/my_configs.vim

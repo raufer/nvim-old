@@ -67,6 +67,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- Execution
+keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && $CONDA_PREFIX/bin/python %\"<cr>", term_opts)
 
 --  turn off highlit mechanism
 keymap("n", "<CR>", ":noh<CR>", opts)
@@ -100,7 +102,7 @@ keymap("n", "gr", "<cmd>Telescope live_grep<cr>", opts)
 
 -- nvim tree
 keymap("n", "<leader>T", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>R", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts)
 
 -- Tab navigation
