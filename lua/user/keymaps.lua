@@ -67,6 +67,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- Execution
+keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && $CONDA_PREFIX/bin/python %\"<cr>", term_opts)
 
 --  turn off highlit mechanism
 keymap("n", "<CR>", ":noh<CR>", opts)
@@ -94,13 +96,13 @@ keymap("n", "<leader>A", "ggVG", opts)
 -- telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "gr", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 -- noremap <leader>gb <cmd>Telescope buffers<cr>
 -- noremap <leader>gh <cmd>Telescope help_tags<cr>
 
 -- nvim tree
 keymap("n", "<leader>T", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+keymap("n", "<leader>R", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts)
 
 -- Tab navigation
@@ -114,5 +116,5 @@ keymap("n", "<leader>7", "7gt", opts)
 keymap("n", "<leader>8", "8gt", opts)
 keymap("n", "<leader>9", "9gt", opts)
 keymap("n", "<leader>0", ":tablast<cr>", opts)
-keymap("n", "<leader>c", ":Bdelete<cr>", opts)
+keymap("n", "<leader>c", ":write <Bar> :Bdelete<cr>", opts)
 

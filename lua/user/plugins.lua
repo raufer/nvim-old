@@ -80,6 +80,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use 'nvim-lua/lsp-status.nvim'
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -96,6 +97,13 @@ return packer.startup(function(use)
 
   use 'tpope/vim-surround'
   use 'folke/tokyonight.nvim'
+
+  -- Autosave
+  use "Pocco81/AutoSave.nvim"
+
+  -- Session
+  use "rmagatti/auto-session"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

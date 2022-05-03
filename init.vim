@@ -17,11 +17,17 @@ lua require('user.telescope')
 lua require('user.autopairs')
 lua require('user.bufferline')
 lua require('user.whichkey')
+lua require('user.project')
+lua require('user.impatient')
+"lua require('user.autosave')
+lua require('user.autosession')
+lua require('user.lspstatus')
 
 try
 source ~/.vim_runtime/my_configs.vim
 catch
 endtry
+
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
