@@ -23,6 +23,7 @@ lua require('user.impatient')
 lua require('user.autosession')
 lua require('user.lspstatus')
 lua require('user.lualine')
+lua require('user.comment')
 
 try
 source ~/.vim_runtime/my_configs.vim
