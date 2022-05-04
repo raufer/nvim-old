@@ -22,6 +22,7 @@ lua require('user.impatient')
 "lua require('user.autosave')
 lua require('user.autosession')
 lua require('user.lspstatus')
+lua require('user.lualine')
 
 try
 source ~/.vim_runtime/my_configs.vim
