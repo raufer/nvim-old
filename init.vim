@@ -9,7 +9,7 @@ lua require('user.devicons')
 lua require('user.lsp')
 lua require('user.cmp')
 lua require('user.nvimtree')
-"lua require('user.treesitter')
+lua require('user.treesitter')
 lua require('user.alpha')
 lua require('user.gitsigns')
 lua require('user.toggleterm')
@@ -19,7 +19,7 @@ lua require('user.bufferline')
 lua require('user.whichkey')
 lua require('user.project')
 lua require('user.impatient')
-"lua require('user.autosave')
+lua require('user.autosave')
 lua require('user.autosession')
 lua require('user.lspstatus')
 lua require('user.lualine')
@@ -80,7 +80,7 @@ set ffs=unix,dos,mac
 set termguicolors " this variable must be enabled for colors to be applied properly
 
 " a list of groups can be found at `:help nvim_tree_highlight`
-highlight NvimTreeFolderIcon guibg=blue
+"  highlight NvimTreeFolderIcon guibg=blue
 
 colorscheme tokyonight
 
