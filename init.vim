@@ -9,7 +9,7 @@ lua require('user.devicons')
 lua require('user.lsp')
 lua require('user.cmp')
 lua require('user.nvimtree')
-lua require('user.treesitter')
+"  lua require('user.treesitter')
 lua require('user.alpha')
 lua require('user.gitsigns')
 lua require('user.toggleterm')
@@ -24,6 +24,7 @@ lua require('user.autosession')
 lua require('user.lspstatus')
 lua require('user.lualine')
 lua require('user.comment')
+lua require('user.trouble')
 
 try
 source ~/.vim_runtime/my_configs.vim

@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
 
+  -- tree explorer
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -55,7 +56,12 @@ return packer.startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
-  use "akinsho/bufferline.nvim"
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons"
+  }
+
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
