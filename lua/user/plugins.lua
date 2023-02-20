@@ -75,7 +75,7 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  use "EdenEast/nightfox.nvim"
+  use "EdenEast/nightfox.nvim" -- Packer
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -95,6 +95,7 @@ return packer.startup(function(use)
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use 'nvim-lua/lsp-status.nvim'
+  use "github/copilot.vim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -110,7 +111,6 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   use 'tpope/vim-surround'
-  use 'folke/tokyonight.nvim'
 
   -- Autosave
   use "Pocco81/auto-save.nvim"
