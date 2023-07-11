@@ -76,6 +76,7 @@ keymap("n", "<CR>", ":noh<CR>", opts)
 -- Quickly insert an empty new line without entering insert mode
 keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", " O", "O<Esc>", opts)
+keymap("n", "<leader><Enter>", "O<Esc>", opts)
 
 -- Repeat combination of Find + Action on the line below
 keymap("n", "<leader>j", "j;.", opts)

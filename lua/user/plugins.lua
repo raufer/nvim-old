@@ -97,6 +97,9 @@ return packer.startup(function(use)
   use 'nvim-lua/lsp-status.nvim'
   use "github/copilot.vim"
 
+  -- Linter
+  use "dense-analysis/ale"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
