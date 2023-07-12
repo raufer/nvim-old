@@ -131,6 +131,15 @@ return packer.startup(function(use)
     end
   }
 
+  -- Grapple - tag important locations
+  use {
+      "cbochs/grapple.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+  }
+
+  -- session manager
+  use 'mhinz/vim-startify'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

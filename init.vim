@@ -28,6 +28,7 @@ lua require('user.lualine')
 lua require('user.comment')
 lua require('user.trouble')
 lua require('user.hop')
+lua require('user.grapple')
 
 try
 source ~/.vim_runtime/my_configs.vim

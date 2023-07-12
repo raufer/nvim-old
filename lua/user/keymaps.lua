@@ -130,3 +130,8 @@ keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 -- Linter
 keymap("n", "<leader>n", "<cmd>ALENextWrap<cr>", opts)
 
+-- Grapple
+keymap("n", "<leader>gt", "<cmd>GrapplePopup tags<cr>", opts)
+keymap("n", "<leader>ga", "<cmd>GrappleTag<cr>", opts)
+keymap("n", "<leader>gu", "<cmd>GrappleUntag<cr>", opts)
+
