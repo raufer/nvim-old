@@ -3,6 +3,7 @@ set nocompatible
 "
 "  imports
 lua require('user.options')
+lua require('user.ale')
 lua require('user.keymaps')
 lua require('user.plugins')
 lua require('user.devicons')
@@ -26,6 +27,7 @@ lua require('user.lspstatus')
 lua require('user.lualine')
 lua require('user.comment')
 lua require('user.trouble')
+lua require('user.hop')
 
 try
 source ~/.vim_runtime/my_configs.vim
