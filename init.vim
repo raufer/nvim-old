@@ -5,13 +5,14 @@ set nocompatible
 lua require('user.options')
 lua require('user.ale')
 lua require('user.keymaps')
+lua require('user.pykeymaps')
 lua require('user.plugins')
 lua require('user.devicons')
 lua require('user.lsp')
 lua require('user.cmp')
 lua require('user.copilot')
 lua require('user.nvimtree')
-"  lua require('user.treesitter')
+lua require('user.treesitter')
 lua require('user.alpha')
 lua require('user.gitsigns')
 lua require('user.toggleterm')
@@ -29,6 +30,7 @@ lua require('user.comment')
 lua require('user.trouble')
 lua require('user.hop')
 lua require('user.grapple')
+lua require('user.nightfox')
 
 try
 source ~/.vim_runtime/my_configs.vim
@@ -61,11 +63,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
-
 set background=dark
 
 " Set extra options when running in GUI mode
@@ -87,7 +84,11 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 " a list of groups can be found at `:help nvim_tree_highlight`
 "  highlight NvimTreeFolderIcon guibg=blue
 
-colorscheme duskfox
+" colorscheme duskfox
+colorscheme nightfox
+" colorscheme kanagawa
+" colorscheme kanagawa-wave
+" colorscheme kanagawa-dragon
 
 set completeopt=menu,menuone,noselect
 set clipboard+=unnamedplus

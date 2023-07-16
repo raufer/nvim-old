@@ -76,7 +76,7 @@ keymap("n", "<CR>", ":noh<CR>", opts)
 -- Quickly insert an empty new line without entering insert mode
 keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", " O", "O<Esc>", opts)
-keymap("n", "<leader><Enter>", "O<Esc>", opts)
+keymap("n", "<Enter>", "O<Esc>", opts)
 
 -- Repeat combination of Find + Action on the line below
 keymap("n", "<leader>j", "j;.", opts)
@@ -135,3 +135,5 @@ keymap("n", "<leader>gt", "<cmd>GrapplePopup tags<cr>", opts)
 keymap("n", "<leader>ga", "<cmd>GrappleTag<cr>", opts)
 keymap("n", "<leader>gu", "<cmd>GrappleUntag<cr>", opts)
 
+-- ALE
+keymap("n", "<C-f>", "<cmd>ALEFix<cr>", opts)
