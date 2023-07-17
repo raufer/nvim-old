@@ -23,5 +23,5 @@ local keymap = vim.api.nvim_set_keymap
 --   command_mode = "c",
 
 -- key commands 
-keymap("n", "H", ":HopWord<CR>", opts)
-keymap("n", "T", ":HopPattern<CR>", opts)
+keymap("n", "<leader>j", ":HopWord<CR>", opts)
+keymap("n", "<leader>T", ":HopPattern<CR>", opts)

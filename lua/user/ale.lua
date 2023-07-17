@@ -15,7 +15,8 @@ vim.g.ale_sign_warning = '.'
 vim.g.ale_fix_on_save = 1
 vim.g.ale_linters_explicit = 1
 
-vim.g.ale_linters = { python = { "flake8", "pylint", "mypy" } }
+--vim.g.ale_linters = { python = { "flake8", "pylint", "mypy" } }
+vim.g.ale_linters = { python = { "flake8", "mypy" } }
 
 vim.g.ale_fixers = {
     ['*'] = {},

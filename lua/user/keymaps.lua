@@ -107,15 +107,15 @@ keymap("n", "<leader>R", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts)
 
 -- Tab navigation
-keymap("n", "<leader>1", "1gt", opts)
-keymap("n", "<leader>2", "2gt", opts)
-keymap("n", "<leader>3", "3gt", opts)
-keymap("n", "<leader>4", "4gt", opts)
-keymap("n", "<leader>5", "5gt", opts)
-keymap("n", "<leader>8", "6gt", opts)
-keymap("n", "<leader>7", "7gt", opts)
-keymap("n", "<leader>8", "8gt", opts)
-keymap("n", "<leader>9", "9gt", opts)
+--[[ keymap("n", "<leader>1", "1gt", opts) ]]
+--[[ keymap("n", "<leader>2", "2gt", opts) ]]
+--[[ keymap("n", "<leader>3", "3gt", opts) ]]
+--[[ keymap("n", "<leader>4", "4gt", opts) ]]
+--[[ keymap("n", "<leader>5", "5gt", opts) ]]
+--[[ keymap("n", "<leader>8", "6gt", opts) ]]
+--[[ keymap("n", "<leader>7", "7gt", opts) ]]
+--[[ keymap("n", "<leader>8", "8gt", opts) ]]
+--[[ keymap("n", "<leader>9", "9gt", opts) ]]
 keymap("n", "<leader>0", ":tablast<cr>", opts)
 keymap("n", "<leader>c", ":write <Bar> :Bdelete<cr>", opts)
 
@@ -137,3 +137,5 @@ keymap("n", "<leader>gu", "<cmd>GrappleUntag<cr>", opts)
 
 -- ALE
 keymap("n", "<C-f>", "<cmd>ALEFix<cr>", opts)
+-- LSP
+keymap("n", "<leader>1", "<cmd>LspRestart<cr>", term_opts)
