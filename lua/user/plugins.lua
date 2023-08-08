@@ -142,6 +142,19 @@ return packer.startup(function(use)
   -- session manager
   use 'mhinz/vim-startify'
 
+  -- appdev
+  use {
+      'neoclide/coc.nvim',
+      branch = 'release'
+  }
+  --[[ use 'natebosch/vim-lsc' ]]
+  --[[ use 'natebosch/vim-lsc-dart' ]]
+  use 'dart-lang/dart-vim-plugin'
+  use 'reisub0/hot-reload.vim'
+
+  -- windows
+  use 'stevearc/dressing.nvim'
+  use 'rcarriga/nvim-notify'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

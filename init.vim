@@ -4,12 +4,12 @@ set nocompatible
 "  imports
 lua require('user.options')
 lua require('user.ale')
-lua require('user.keymaps')
 lua require('user.pykeymaps')
+lua require('user.keymaps')
 lua require('user.plugins')
 lua require('user.devicons')
 lua require('user.lsp')
-lua require('user.cmp')
+" lua require('user.cmp')
 lua require('user.copilot')
 lua require('user.nvimtree')
 lua require('user.treesitter')
@@ -31,6 +31,8 @@ lua require('user.trouble')
 lua require('user.hop')
 lua require('user.grapple')
 lua require('user.nightfox')
+lua require('user.coc')
+lua require('user.dressing')
 
 try
 source ~/.vim_runtime/my_configs.vim
@@ -47,9 +49,8 @@ autocmd BufReadPost *
 
 " Go to last active tab
 au TabLeave * let g:lasttab = tabpagenr()
-nnoremap <silent> <leader>l :exe "tabn ".g:lasttab<cr>
-vnoremap <silent> <leader>l :exe "tabn ".g:lasttab<cr>
-
+"  nnoremap <silent> <leader>l :exe "tabn ".g:lasttab<cr>
+" vnoremap <silent> <leader>l :exe "tabn ".g:lasttab<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -92,4 +93,11 @@ colorscheme nightfox
 
 set completeopt=menu,menuone,noselect
 set clipboard+=unnamedplus
+
+set tabstop=4                                                                   
+set smarttab                                                                    
+set shiftwidth=4                                                                
+set softtabstop=4                                                               
+set expandtab                                                                                                                                                    
+set autoindent
 

@@ -67,16 +67,18 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+
 -- Execution
-keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && $CONDA_PREFIX/bin/python %\"<cr>", term_opts)
+keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && python %\"<cr>", term_opts)
+keymap("n", "<leader>t", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && pytest %\"<cr>", term_opts)
 
 --  turn off highlit mechanism
-keymap("n", "<CR>", ":noh<CR>", opts)
+-- keymap("n", "<CR>", ":noh<CR>", opts)
 
 -- Quickly insert an empty new line without entering insert mode
 keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", " O", "O<Esc>", opts)
-keymap("n", "<Enter>", "O<Esc>", opts)
+keymap("n", "<Enter>", "o<Esc>", opts)
 
 -- Repeat combination of Find + Action on the line below
 keymap("n", "<leader>j", "j;.", opts)

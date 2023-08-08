@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -148,6 +153,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
+  },
+  ["dart-vim-plugin"] = {
+    loaded = true,
+    path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
+    url = "https://github.com/dart-lang/dart-vim-plugin"
+  },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -169,6 +184,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
+  },
+  ["hot-reload.vim"] = {
+    loaded = true,
+    path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/hot-reload.vim",
+    url = "https://github.com/reisub0/hot-reload.vim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -229,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/Users/raulferreira/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,

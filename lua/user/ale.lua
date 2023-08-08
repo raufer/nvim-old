@@ -16,13 +16,18 @@ vim.g.ale_fix_on_save = 1
 vim.g.ale_linters_explicit = 1
 
 --vim.g.ale_linters = { python = { "flake8", "pylint", "mypy" } }
-vim.g.ale_linters = { python = { "flake8", "mypy" } }
+vim.g.ale_linters = {
+    python = { "flake8", "pylint", "mypy" },
+    dart = { "dartanalyzer" }
+}
 
 vim.g.ale_fixers = {
     ['*'] = {},
     python = {'black', 'isort'},
     sh = {'shfmt'},
     zsh = {'shfmt'},
+    html = {'prettier'},
+    dart = {'dartfmt'},
 }
 
 vim.g.ale_python_isort_options = "--profile black"

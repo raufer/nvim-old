@@ -5,11 +5,27 @@ end
 
 local lspconfig = require("lspconfig")
 
+--[[ local servers = { "jsonls", "lua_ls" , "pyright", "yamlls", "hls", "dartls"} ]]
 local servers = { "jsonls", "lua_ls" , "pyright", "yamlls", "hls"}
 
 lsp_installer.setup {
 	ensure_installed = servers
 }
+
+--[[ require 'lspconfig'.dartls.setup { ]]
+--[[   settings = { ]]
+--[[     dart = { ]]
+--[[       lineLength = 150, ]]
+--[[       completeFunctionCalls = true, ]]
+--[[       showTodos = true, ]]
+--[[       closingLabels = true, ]]
+--[[       flutterOutline = true, ]]
+--[[       onlyAnalyzeProjectsWithOpenFiles = true, ]]
+--[[       outline = true, ]]
+--[[       suggestFromUnimportedLibraries = true ]]
+--[[     } ]]
+--[[   } ]]
+--[[ } ]]
 
 for _, server in pairs(servers) do
 	local opts = {
