@@ -53,6 +53,23 @@ au TabLeave * let g:lasttab = tabpagenr()
 " vnoremap <silent> <leader>l :exe "tabn ".g:lasttab<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set smarttab                                                                    
+" manages the indentation when you use the '>>' or '<<' operators
+set shiftwidth=2       
+set softtabstop=2    
+" this will insert N spaces for a line indent.
+set tabstop=2
+" makes sure that spaces are used for indenting lines, even when you press the 'Tab' key.
+set expandtab                                                                                                                                                    
+set autoindent
+
+" for python files, 4 spaces
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -93,11 +110,4 @@ colorscheme nightfox
 
 set completeopt=menu,menuone,noselect
 set clipboard+=unnamedplus
-
-set tabstop=4                                                                   
-set smarttab                                                                    
-set shiftwidth=4                                                                
-set softtabstop=4                                                               
-set expandtab                                                                                                                                                    
-set autoindent
 
