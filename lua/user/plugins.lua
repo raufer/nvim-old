@@ -122,6 +122,7 @@ return packer.startup(function(use)
 
   -- Session
   use "rmagatti/auto-session"
+  
 
   -- navigation
   use {
@@ -155,9 +156,15 @@ return packer.startup(function(use)
   -- windows
   use 'stevearc/dressing.nvim'
   use 'rcarriga/nvim-notify'
+  use 'MunifTanjim/nui.nvim'
+  -- use "folke/noice.nvim"
+	-- themes
+	use 'navarasu/onedark.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
 end)
+

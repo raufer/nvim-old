@@ -17,6 +17,7 @@ function _G.check_back_space()
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
+
 -- Use Tab for trigger completion with characters ahead and navigate
 -- NOTE: There's always a completion item selected by default, you may want to enable
 -- no select by setting `"suggest.noselect": true` in your configuration file
@@ -31,7 +32,7 @@ keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+--keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
 --[[ keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true}) ]]
 
@@ -72,6 +73,9 @@ vim.api.nvim_create_autocmd("CursorHold", {
 
 -- Symbol renaming
 keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
+keyset("n", "<space>t", ":DartFmt<CR>", {silent = true})
+--keyset("v", "<space>fr", "<Plug>(coc-format-selected)", {silent = true})
+
 
 
 -- Formatting selected code

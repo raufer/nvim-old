@@ -24,6 +24,7 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "Q", ":q<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -69,8 +70,8 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 
 -- Execution
-keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && python %\"<cr>", term_opts)
-keymap("n", "<leader>t", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && pytest %\"<cr>", term_opts)
+--[[ keymap("n", "<leader>r", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && python %\"<cr>", term_opts) ]]
+--[[ keymap("n", "<leader>t", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && pytest %\"<cr>", term_opts) ]]
 
 --  turn off highlit mechanism
 -- keymap("n", "<CR>", ":noh<CR>", opts)

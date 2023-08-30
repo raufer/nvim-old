@@ -51,6 +51,7 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+  preselect = cmp.PreselectMode.None,
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -110,10 +111,10 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "buffer" },
-    { name = "path" },
+    --[[ { name = "nvim_lsp" }, ]]
+    --[[ { name = "luasnip" }, ]]
+    --[[ { name = "buffer" }, ]]
+    --[[ { name = "path" }, ]]
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
