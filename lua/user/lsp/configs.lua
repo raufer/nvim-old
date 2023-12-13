@@ -12,21 +12,6 @@ lsp_installer.setup {
 	ensure_installed = servers
 }
 
---[[ require 'lspconfig'.dartls.setup { ]]
---[[   settings = { ]]
---[[     dart = { ]]
---[[       lineLength = 150, ]]
---[[       completeFunctionCalls = true, ]]
---[[       showTodos = true, ]]
---[[       closingLabels = true, ]]
---[[       flutterOutline = true, ]]
---[[       onlyAnalyzeProjectsWithOpenFiles = true, ]]
---[[       outline = true, ]]
---[[       suggestFromUnimportedLibraries = true ]]
---[[     } ]]
---[[   } ]]
---[[ } ]]
-
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
@@ -37,4 +22,10 @@ for _, server in pairs(servers) do
 	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end
 	lspconfig[server].setup(opts)
+end
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " } 
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
 end

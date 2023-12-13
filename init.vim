@@ -33,6 +33,7 @@ lua require('user.grapple')
 lua require('user.nightfox')
 lua require('user.coc')
 lua require('user.dressing')
+lua require('user.ufo')
 " lua require('user.vscode')
 " lua require('user.noice')
 

@@ -14,10 +14,12 @@ vim.g.ale_sign_warning = '.'
 
 vim.g.ale_fix_on_save = 1
 vim.g.ale_linters_explicit = 1
+vim.g.ale_virtualtext_cursor = 'disabled'
 
 --vim.g.ale_linters = { python = { "flake8", "pylint", "mypy" } }
 vim.g.ale_linters = {
-    python = { "flake8", "pylint", "mypy" },
+    --[[ python = { "flake8", "pylint", "mypy" }, ]]
+    python = { "flake8", },
     dart = { "dartanalyzer" }
 }
 
@@ -31,4 +33,6 @@ vim.g.ale_fixers = {
 }
 
 vim.g.ale_python_isort_options = "--profile black"
+
+
 
