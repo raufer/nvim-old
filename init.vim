@@ -114,6 +114,13 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 " autocmd FileType dart setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 "
+"
+" Mappings
+"inside next parentheses", and it will perform the operator on the text inside the next set of parentheses on the current line.
+:onoremap in( :<c-u>normal! f(vi(<cr>
+" Let's make a companion "inside last parentheses" ("previous" would be a better word, but it would shadow the "paragraph" movement).
+:onoremap il( :<c-u>normal! F)vi(<cr>
+
 
 " ==================== Terminal Behaviors ====================
 let g:neoterm_autoscroll = 1

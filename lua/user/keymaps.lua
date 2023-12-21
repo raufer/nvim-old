@@ -36,12 +36,6 @@ keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
---keymap("n", "ª", "<Esc>:m .+1<CR>==gi", opts)
---keymap("n", "º", "<Esc>:m .-2<CR>==gi", opts)
-
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -51,17 +45,12 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
-
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+--[[ keymap("x", "J", ":move '>+1<CR>gv-gv", opts) ]]
+--[[ keymap("x", "K", ":move '<-2<CR>gv-gv", opts) ]]
+--[[ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts) ]]
+--[[ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts) ]]
 
 -- Terminal --
 -- Better terminal navigation
@@ -74,28 +63,14 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 --[[ keymap("n", "<leader>t", ":write <Bar> :TermExec cmd=\"export PYTHONPATH=$(pwd) && pytest %\"<cr>", term_opts) ]]
 
 --  turn off highlit mechanism
--- keymap("n", "<CR>", ":noh<CR>", opts)
+keymap("n", "<CR>", ":noh<CR>", opts)
 
 -- Quickly insert an empty new line without entering insert mode
-keymap("n", "<leader>o", "o<Esc>", opts)
-keymap("n", " O", "O<Esc>", opts)
-keymap("n", "<Enter>", "o<Esc>", opts)
-
--- Repeat combination of Find + Action on the line below
-keymap("n", "<leader>j", "j;.", opts)
 
 -- line break at current position
 --keymap("n", "K", "i<enter><Esc>", opts)
--- copy the paragraph your cursor is on then paste a copy of it just below
-keymap("n", "cp", "yap<S-}>p", opts)
 -- align your current paragraph
 keymap("n", "<leader>a", "=ip", opts)
-
--- quite files 
-keymap("n", "<leader>q", "ZZ", opts)
-
---  select all, i.e. <c-a>
-keymap("n", "<leader>A", "ggVG", opts)
 
 -- telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
@@ -119,19 +94,18 @@ keymap("n", "<leader>e", ":NvimTreeFindFile<CR>", opts)
 --[[ keymap("n", "<leader>7", "7gt", opts) ]]
 --[[ keymap("n", "<leader>8", "8gt", opts) ]]
 --[[ keymap("n", "<leader>9", "9gt", opts) ]]
-keymap("n", "<leader>0", ":tablast<cr>", opts)
-keymap("n", "<leader>c", ":write <Bar> :Bdelete<cr>", opts)
+--[[ keymap("n", "<leader>0", ":tablast<cr>", opts) ]]
 
 -- trouble diagnosis
-keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
-keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
-keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
-keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+--[[ keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts) ]]
+--[[ keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts) ]]
+--[[ keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts) ]]
+--[[ keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts) ]]
+--[[ keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts) ]]
+--[[ keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts) ]]
 
 -- Linter
-keymap("n", "<leader>n", "<cmd>ALENextWrap<cr>", opts)
+--[[ keymap("n", "<leader>n", "<cmd>ALENextWrap<cr>", opts) ]]
 
 -- Grapple
 keymap("n", "<leader>gt", "<cmd>GrapplePopup tags<cr>", opts)
@@ -139,6 +113,6 @@ keymap("n", "<leader>ga", "<cmd>GrappleTag<cr>", opts)
 keymap("n", "<leader>gu", "<cmd>GrappleUntag<cr>", opts)
 
 -- ALE
-keymap("n", "<C-f>", "<cmd>ALEFix<cr>", opts)
+--[[ keymap("n", "<C-f>", "<cmd>ALEFix<cr>", opts) ]]
 -- LSP
-keymap("n", "<leader>1", "<cmd>LspRestart<cr>", term_opts)
+--[[ keymap("n", "<leader>1", "<cmd>LspRestart<cr>", term_opts) ]]
